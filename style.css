@@ -273,6 +273,29 @@ header.sticky{
     margin-bottom: 4rem;
 }
 
+/* more about me */
+
+.about-me{
+    line-height: 1.7;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px 10px 10px 10px;
+}
+p{
+    margin-bottom: 10px;
+}
+span a{
+    color: #5e83e9;
+}
+.body-intro, .body-datascience{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*  services section  */ 
 
 /*.services{

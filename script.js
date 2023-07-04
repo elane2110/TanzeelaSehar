@@ -108,36 +108,13 @@ layerDivs.forEach(layerDiv => {
   });
 });
 
-// contact form
+// jump between multiple pages
 
-// Capture form submission event
-document.querySelector('.contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-  
-  // Get form data
-  var formData = new FormData(this);
-  
-  // Create AJAX request
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/submit-form'); // Specify the URL of your Python script's endpoint
-  
-  // Set headers if necessary
-  // xhr.setRequestHeader('Content-Type', 'application/json');
-  
-  // Handle response
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      // Successful response
-      console.log(xhr.responseText);
-    } else {
-      // Error handling
-      console.error('An error occurred.');
-    }
-  };
-  
-  // Send the form data
-  xhr.send(formData);
-});
+function navigateToPage(url) {
+  window.location.href = url;
+}
+
+// contact form
 
 /*
 var form = document.forms.contactForm;
