@@ -48,7 +48,6 @@ window.addEventListener('scroll', function() {
   });
 });
 
-
 // read more
 
 const serviceItems = document.querySelectorAll('.read');
@@ -121,33 +120,3 @@ document.addEventListener('keydown', function(event) {
     event.preventDefault();
   }
 });
-
-// Prevent scrolling on the HTML page while playing the game
-document.addEventListener("touchmove", function(event) {
-  event.preventDefault();
-}, { passive: false });
-
-
-// contact form
-
-/*
-var form = document.forms.contactForm;
-
-var nameInput = form.elements.name;
-var emailInput = form.elements.email;
-var phoneInput = form.elements.contactNumber;
-var messageInput = form.elements.message;
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  console.log(nameInput.value);
-  console.log(emailInput.value);
-  console.log(phoneInput.value);
-  console.log(messageInput.value);
-  // Perform form submission handling
-});
-*/
-
-
-
-
