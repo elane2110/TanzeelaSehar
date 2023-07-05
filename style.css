@@ -965,7 +965,7 @@ canvas {
         text-align: left;
     }
 }
-@media(max-width: 360px){
+@media(max-width: 760px){
     .home{
         margin-top: 270px;
         margin-bottom: 250px;
