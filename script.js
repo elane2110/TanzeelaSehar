@@ -122,6 +122,11 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
+// Prevent scrolling on the HTML page while playing the game
+document.addEventListener("touchmove", function(event) {
+  event.preventDefault();
+}, { passive: false });
+
 
 // contact form
 
