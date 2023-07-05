@@ -409,6 +409,63 @@
                }
                });
 
+               // for touch events
+
+               var direction = "right"; // Initial direction of the snake
+
+               // Function to handle touch events
+               function handleTouch(event) {
+               var touch = event.touches[0];
+               var x = touch.clientX;
+               var y = touch.clientY;
+
+               // Calculate the difference in coordinates
+               var deltaX = x - window.innerWidth / 2;
+               var deltaY = y - window.innerHeight / 2;
+
+               // Determine the direction based on the touch position
+               if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                  // Horizontal swipe
+                  if (deltaX > 0) {
+                     direction = "right";
+                  } else {
+                     direction = "left";
+                  }
+               } else {
+                  // Vertical swipe
+                  if (deltaY > 0) {
+                     direction = "down";
+                  } else {
+                     direction = "up";
+                  }
+               }
+
+               // left arrow key
+               if (direction === 'left') {
+                  snake.dx = -grid;
+                  snake.dy = 0;
+               }
+               // up arrow key
+               else if (direction === 'up') {
+                  snake.dy = -grid;
+                  snake.dx = 0;
+               }
+               // right arrow key
+               else if (direction === 'right') {
+                  snake.dx = grid;
+                  snake.dy = 0;
+               }
+               // down arrow key
+               else if (direction === 'right') {
+                  snake.dy = grid;
+                  snake.dx = 0;
+               }
+
+               }
+
+               // Add event listener for touch events
+               document.addEventListener("touchstart", handleTouch);
+
                // start the game
                requestAnimationFrame(loop);
                            </script>
