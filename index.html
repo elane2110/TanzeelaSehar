@@ -436,10 +436,31 @@
                }
 
                }
+               // Add touch event listeners to the game canvas
+                  canvas.addEventListener("touchstart", handleTouchStart);
+                  canvas.addEventListener("touchmove", handleTouchMove);
 
-               // Add event listener for touch events
-               canvas.addEventListener("touchstart", handleTouch);
-               
+                  // Touch event handler for touch start
+                  function handleTouchStart(event) {
+                  event.preventDefault();
+                  // Check if the game is already in progress
+                  if (!isGameRunning) {
+                     // Start the game if it's not already running
+                     isGameRunning = true;
+                     // Call your function to start the game logic
+                     startGame();
+                  } else {
+                     // Handle the touch as a player action
+                     // Call your function to handle the action, e.g., change snake direction
+                     handleTouch();
+                  }
+                  }
+
+                  // Touch event handler for touch move
+                  function handleTouchMove(event) {
+                  event.preventDefault();
+                  }
+
                // start the game
                requestAnimationFrame(loop);
                            </script>
