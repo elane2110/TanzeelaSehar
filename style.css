@@ -834,6 +834,21 @@ canvas {
         margin-top: 50px;
         margin-bottom: 70px;
     }
+    .overlay-content{
+        margin: 20px;
+        padding: 30px;
+        height: 500px;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+    .overlay-content h3{
+        padding-top: 10px;
+    }
+    .read-more{
+        padding-top: 20px;
+    }
 }
 
 @media (max-width: 874px){
@@ -869,6 +884,9 @@ canvas {
     .navlist.open{
         top: 100%;
     }
+    .overlay-content{
+        margin: 0;
+    }
 }
 @media(max-width: 820px){
     .about-text{
@@ -899,6 +917,10 @@ canvas {
         margin-bottom: 10px;
         padding: 0;
     }
+    .overlay-content{
+        width: 500px;
+        height: fit-content;
+    }
 }
 @media(max-width: 540px){
     .about-text{
@@ -912,6 +934,10 @@ canvas {
         margin-top: 15px;
         margin-bottom: 10px;
         padding: 0;
+    }
+    .overlay-content{
+        width: 400px;
+        height: fit-content;
     }
 }
 @media(max-width: 500px){
