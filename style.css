@@ -962,3 +962,60 @@ canvas {
         text-align: left;
     }
 }
+@media(max-width: 360px){
+    .home{
+        margin-top: 270px;
+        margin-bottom: 250px;
+    }
+    .home, .about, .services, .portfolio, .contact, .end{
+        width: 420px;
+    }
+    .services{
+        margin-bottom: 50px;
+    }
+    .home-text p{
+        margin-bottom: 5px;
+    }
+    .button{
+        margin: 20px;
+        margin-top: 0;
+        padding: 10px;
+    }
+    .btn{
+        padding: 15px;
+        width: 150px;
+    }
+    .btn2{
+        margin-left: 60px;
+    }
+    .about, .services, .portfolio, .contact{
+        padding-top: 40px;
+    }
+    .about-text, .portfolio-content{
+        margin: 20px;
+    }
+    .portfolio .main-text{
+        margin-top: 60px;
+    }
+    .portfolio-content{
+        margin-top: 60px;
+    }
+    .contact{
+        margin-bottom: 20px;
+    }
+    canvas{
+        width: 350px;
+    }
+    .end{
+        margin: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .end-text{
+        width: 360px;
+    }
+    .top{
+        order: 2;
+        margin-top: 0;
+    }
+}
