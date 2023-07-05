@@ -10,7 +10,7 @@
 
 :root{
     --bg-color: #f3f3f3;
-    --second-bg-color: #587194;
+    --second-bg-color: #5f89c4;
     --text-color: #1e161f;
     --second-color: #29313a;
     --main-color: #5e83e9;
@@ -166,14 +166,13 @@ section{
 }
 
 .button{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 35%;
     margin-bottom: 20px;
 }
 
-.btn{
+.btn, .btn3, .btn4{
     display: inline-block;
     padding: 12px 28px;
     background: var(--main-color);
@@ -235,8 +234,7 @@ header.sticky{
     position: relative;
     align-items: center;
     justify-content: center;
-    padding-left: 40px;
-    padding-bottom: 40px;
+    padding: 40px;
 }
 .about-img img{
     max-width: 430px;
@@ -248,9 +246,9 @@ header.sticky{
 }
 
 .about-text{
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 40px;
+    margin: 0;
+    padding: 40px;
+    padding-top: 0;
 }
 
 .about-text h2{
@@ -271,6 +269,15 @@ header.sticky{
     font-size: var(--p-font);
     line-height: 1.8;
     margin-bottom: 4rem;
+}
+
+.about-buttons{
+    display: flex;
+}
+
+.about-buttons a{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* more about me */
@@ -758,14 +765,62 @@ canvas {
         height: 87vh; 
     }
 }
+@media(max-width: 1545px){
+    .about-text{
+        margin: 30px;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .about-text li, .about-text h4, .about-text h2{
+        padding: 10px;
+    }
+    .about-text h4{
+        margin: 10px;
+        margin-left: 0;
+    }
+    .about-text p{
+        margin-bottom: 2rem;
+    }
+    .about-img{
+        margin: 50px;
+        padding: 0;
+        margin-top: 20px;
+    }
+    .main-text p{
+        display: none;
+    }
+    .services-content, .portfolio-content, .contact-text, .end{
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 0;
+    }
+    .services-item{
+        padding: 25px;
+    }
+    .contact-text{
+        text-align: justify;
+    }
+    .end{
+        margin-bottom: 20px;
+    }
+}
 
 @media (max-width: 920px){
     .about{
         grid-template-columns: 1fr;
     }
+    .about-text{
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        padding: 100px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
     .about-img{
-        text-align: center;
         order: 2;
+        margin: 120px;
+        margin-top: 10px;
     }
     .about-img img{
         width: 100%;
@@ -775,9 +830,13 @@ canvas {
     .contact{
         grid-template-columns: 1fr;
     }
+    section{
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
 }
 
-@media (max-width: 840px){
+@media (max-width: 874px){
     #menu-icon{
         display: block;
     }
@@ -788,9 +847,10 @@ canvas {
         left: 0;
         display: flex;
         flex-direction: column;
-        background: var(--bg-color);
+        background: #c5ccdf;
         text-align: left;
         transition: all .45s ease;
+        text-align: center;
     }
     .navlist a{
         display: block;
@@ -803,9 +863,76 @@ canvas {
         color: var(--main-color);
     }
     .navlist a.active{
-        color: var(--text-color);
+        color: #c5ccdf;
+        background-color: var(--second-bg-color);
     }
     .navlist.open{
         top: 100%;
+    }
+}
+@media(max-width: 820px){
+    .about-text{
+        padding: 50px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .about-img{
+        margin: 100px; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+@media(max-width: 630px){
+    .about-buttons{
+        align-items: center;
+        justify-content: center;
+    }
+    .about-text{
+        padding: 0;
+        margin: 80px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+    .about-img{
+        margin: 80px; 
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}
+@media(max-width: 540px){
+    .about-text{
+        padding: 0;
+        margin: 40px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+    }
+    .about-img{
+        margin: 80px; 
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}
+@media(max-width: 500px){
+    .home{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .home-text p{
+        margin: 20px;
+    }
+    .home-text h3, .slide{
+        margin: 20px;
+    }
+    .slide span{
+        margin: 0;
+    }
+    .about, .services, .portfolio, .contact{
+        margin-top: 20px;
+        padding-top: 60px;
+    }
+    .about li{
+        text-align: left;
     }
 }

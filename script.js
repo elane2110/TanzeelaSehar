@@ -114,6 +114,15 @@ function navigateToPage(url) {
   window.location.href = url;
 }
 
+// to prevent page scrolling when we use arrow keys to play the game
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    event.preventDefault();
+  }
+});
+
+
 // contact form
 
 /*
