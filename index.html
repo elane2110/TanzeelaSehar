@@ -385,8 +385,6 @@
 
                // for touch events
 
-               var direction = "right"; // Initial direction of the snake
-
                // Function to handle touch events
                function handleTouch(event) {
                var touch = event.touches[0];
@@ -448,7 +446,7 @@
                      // Start the game if it's not already running
                      isGameRunning = true;
                      // Call your function to start the game logic
-                     startGame();
+                     requestAnimationFrame(loop);
                   } else {
                      // Handle the touch as a player action
                      // Call your function to handle the action, e.g., change snake direction
