@@ -385,80 +385,60 @@
 
                // for touch events
 
-               // Function to handle touch events
-               function handleTouch(event) {
-               var touch = event.touches[0];
-               var x = touch.clientX;
-               var y = touch.clientY;
+               // Add touch event listeners to the game canvas
+               canvas.addEventListener("touchstart", handleTouchStart);
+               canvas.addEventListener("touchmove", handleTouchMove);
 
-               // Calculate the difference in coordinates
-               var deltaX = x - window.innerWidth / 2;
-               var deltaY = y - window.innerHeight / 2;
+               // Variables to store touch coordinates
+               let touchStartX = 0;
+               let touchStartY = 0;
+               let touchEndX = 0;
+               let touchEndY = 0;
 
-               // Determine the direction based on the touch position
+               // Touch event handler for touch start
+               function handleTouchStart(event) {
+               event.preventDefault();
+               // Get the initial touch coordinates
+               touchStartX = event.touches[0].clientX;
+               touchStartY = event.touches[0].clientY;
+               }
+
+               // Touch event handler for touch move
+               function handleTouchMove(event) {
+               event.preventDefault();
+               // Get the current touch coordinates
+               touchEndX = event.touches[0].clientX;
+               touchEndY = event.touches[0].clientY;
+
+               // Calculate the horizontal and vertical distance moved
+               const deltaX = touchEndX - touchStartX;
+               const deltaY = touchEndY - touchStartY;
+
+               // Determine the primary direction of movement
                if (Math.abs(deltaX) > Math.abs(deltaY)) {
-                  // Horizontal swipe
+                  // Horizontal movement
                   if (deltaX > 0) {
-                     direction = "right";
+                     // Move right
+                     snake.dx = grid;
+                     snake.dy = 0;
                   } else {
-                     direction = "left";
+                     // Move left
+                     snake.dx = -grid;
+                     snake.dy = 0;
                   }
                } else {
-                  // Vertical swipe
+                  // Vertical movement
                   if (deltaY > 0) {
-                     direction = "down";
+                     // Move down
+                     snake.dy = grid;
+                     snake.dx = 0;
                   } else {
-                     direction = "up";
+                     // Move up
+                     snake.dy = -grid;
+                     snake.dx = 0;
                   }
                }
-
-               // left arrow key
-               if (direction === 'left') {
-                  snake.dx = -grid;
-                  snake.dy = 0;
                }
-               // up arrow key
-               else if (direction === 'up') {
-                  snake.dy = -grid;
-                  snake.dx = 0;
-               }
-               // right arrow key
-               else if (direction === 'right') {
-                  snake.dx = grid;
-                  snake.dy = 0;
-               }
-               // down arrow key
-               else if (direction === 'right') {
-                  snake.dy = grid;
-                  snake.dx = 0;
-               }
-
-               }
-               // Add touch event listeners to the game canvas
-                  canvas.addEventListener("touchstart", handleTouchStart);
-                  canvas.addEventListener("touchmove", handleTouchMove);
-
-                  // Touch event handler for touch start
-                  function handleTouchStart(event) {
-                  event.preventDefault();
-                  // Check if the game is already in progress
-                  if (!isGameRunning) {
-                     // Start the game if it's not already running
-                     isGameRunning = true;
-                     // Call your function to start the game logic
-                     requestAnimationFrame(loop);
-                  } else {
-                     // Handle the touch as a player action
-                     // Call your function to handle the action, e.g., change snake direction
-                     handleTouch();
-                  }
-                  }
-
-                  // Touch event handler for touch move
-                  function handleTouchMove(event) {
-                  event.preventDefault();
-                  }
-
                // start the game
                requestAnimationFrame(loop);
                            </script>
