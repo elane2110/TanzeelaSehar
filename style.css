@@ -196,7 +196,7 @@ section{
     transition: all .45s ease;
 }
 
-.btn:hover{
+.btn:hover, .btn3:hover, .btn4:hover{
     transform: scale(0.9);
 }
 
