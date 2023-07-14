@@ -777,7 +777,8 @@ canvas {
         font-size: 2.5rem;
     }
     .home{
-        height: 87vh; 
+        height: 100vh;
+        width: 100vw; 
     }
 }
 @media(max-width: 1545px){
@@ -821,6 +822,21 @@ canvas {
 }
 
 @media (max-width: 920px){
+    .home{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 90vh;
+    }
+    .about-text{
+        padding: 50px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .about-img{
+        margin: 100px; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .about{
         grid-template-columns: 1fr;
     }
@@ -846,8 +862,8 @@ canvas {
         grid-template-columns: 1fr;
     }
     section{
-        margin-top: 50px;
-        margin-bottom: 70px;
+        margin-top: 30px;
+        margin-bottom: 50px;
     }
     .overlay-content{
         margin: 20px;
@@ -864,9 +880,6 @@ canvas {
     .read-more{
         padding-top: 20px;
     }
-}
-
-@media (max-width: 874px){
     #menu-icon{
         display: block;
     }
@@ -903,90 +916,17 @@ canvas {
         margin: 0;
     }
 }
-@media(max-width: 820px){
-    .about-text{
-        padding: 50px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-    .about-img{
-        margin: 100px; 
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-@media(max-width: 630px){
-    .about-buttons{
-        align-items: center;
-        justify-content: center;
-    }
-    .about-text{
-        padding: 0;
-        margin: 80px;
-        margin-top: 8px;
-        margin-bottom: 12px;
-    }
-    .about-img{
-        margin: 80px; 
-        margin-top: 15px;
-        margin-bottom: 10px;
-        padding: 0;
-    }
-    .overlay-content{
-        width: 500px;
-        height: fit-content;
-    }
-}
-@media(max-width: 540px){
-    .about-text{
-        padding: 0;
-        margin: 40px;
-        margin-top: 8px;
-        margin-bottom: 12px;
-    }
-    .about-img{
-        margin: 80px; 
-        margin-top: 15px;
-        margin-bottom: 10px;
-        padding: 0;
-    }
-    .overlay-content{
-        width: 400px;
-        height: fit-content;
-    }
-}
-@media(max-width: 500px){
-    .home{
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
-    .home-text p{
-        margin: 20px;
-    }
-    .home-text h3, .slide{
-        margin: 20px;
-    }
-    .slide span{
-        margin: 0;
-    }
-    .about, .services, .portfolio, .contact{
-        margin-top: 20px;
-        padding-top: 60px;
-    }
-    .about li{
-        text-align: left;
-    }
-}
-@media(max-width: 760px){
-    .home{
-        margin-top: 270px;
-        margin-bottom: 250px;
-    }
+@media(max-width: 800px){
     .home, .about, .services, .portfolio, .contact, .end{
-        width: 420px;
+        width: 100vw;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
     .services{
         margin-bottom: 50px;
+    }
+    .home-text p, .home-text h3{
+        text-align: justify;
     }
     .home-text p{
         margin-bottom: 5px;
@@ -1025,6 +965,8 @@ canvas {
         margin: 10px;
         padding: 10px;
         margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
     }
     .end-text{
         width: 360px;
@@ -1046,15 +988,117 @@ canvas {
     .about-me h4{
         text-align: center;
     }
-    .end{
-        padding-right: 100px;
-        align-items: center;
-        justify-content: center;
-    }
     .end-text p{
         margin: 20px;
         text-align: justify;
         margin-top: 0;
         margin-bottom: 0;
+    }
+}
+
+@media(max-width: 700px){
+    .home-text h3{
+        font-size: 2rem;
+    }
+    section{
+        padding: 110px 3% 60px;
+    }
+    .home{
+        max-height: 100vh;
+        margin-top: 0;
+        min-height: 1000px;
+        height: 90vh !important;
+        margin-bottom: 200px;
+    }
+    .about{
+        margin-top: 200px;
+    }
+    .about-text{
+        padding: 50px;
+    }
+    .home-text{
+        position: absolute;
+        top: 150px;
+        margin: 10px;
+    }
+    .home-text .button{
+        margin-bottom: 50px;
+    }
+    .home-text h3, .slide{
+        margin-right: 50px;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .slide{
+        margin: 0;
+    }
+    .slide span{
+        margin: 0;
+        box-sizing: border-box !important;
+    }
+    .portfolio-content{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media(max-width: 607px){
+    .top{
+        display: none;
+    }
+    .end-text{
+        width: 100vw;
+        padding-right: 20px;
+    }
+}
+
+@media(max-width: 550px){
+    .home-text .btn{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .home{
+        margin-bottom: 10px;
+    }
+    .about{
+        margin-top: 100px;
+    }
+    .home-text{
+        top: 100px;
+    }
+    .home-text h3, .home-text p, .home-text .button{
+        margin: 30px;
+    }
+    .home-text p{
+        margin-bottom: 20px;
+    }
+    .home-text .button{
+        margin-top: 40px;
+    }
+    .about-text{
+        padding: 20px;
+    }
+    .about-img{
+        margin: 50px;
+    }
+    .about, .services, .portfolio, .contact{
+        padding: 30px;
+    }
+    .row-container{
+        max-height: 80%;
+        max-width: 80%;
+    }
+    .portfolio-content{
+        padding-left: 74px;
+    }
+}
+@media(max-width: 520px){
+    .home{
+        margin-bottom: 150px;
+    }
+    .about{
+        margin-top: 150px;
     }
 }
