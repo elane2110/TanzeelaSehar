@@ -416,7 +416,7 @@ span a{
 /*  portfolio section  */
 
 .portfolio{
-    background-color: #fff; /* #c5ccdf;*/
+    background-color: var(--bg-color); /* #c5ccdf;*/
 }
 
 .portfolio-content{
