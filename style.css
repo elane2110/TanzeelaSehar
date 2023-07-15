@@ -394,43 +394,6 @@ span a{
     transform: translateY(-8px);
 }
 
-/* Overlay stuff - hidden content */
-
-/*.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
- }
-
- .overlay-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 24px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.9);
- }
-
- .overlay.show {
-    display: block;
- }
-
- .overlay.show .overlay-content {
-    display: block;
- }
-
- .overlay-content p {
-    margin: 0;
- }*/
-
 #data-analysis,#machine-learning, #deep-learning{
     display: none;
     position: fixed;
@@ -450,19 +413,10 @@ span a{
     padding: 20px;
 }
 
-/*#data-analysis, #machine-learning, #deep-learning {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-}*/  
-
 /*  portfolio section  */
 
 .portfolio{
-    background-color: #c5ccdf;
+    background-color: #fff; /* #c5ccdf;*/
 }
 
 .portfolio-content{
@@ -572,6 +526,7 @@ span a{
 
 .contact{
     /*background: var(--second-bg-color);*/
+    background-color: #c5ccdf;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -653,7 +608,7 @@ span a{
 }
 
 canvas {
-    background: #d3d9ec;
+    background: #dee1ec;  /* #d3d9ec */
     border: 1px solid #5e83e9;
     border-width: 5px;
 }
@@ -665,6 +620,7 @@ canvas {
     justify-content: space-between;
     gap: 2rem;
     background: var(--bg-color);
+    margin-top: 20px;
 }
 
 .last-text p{
@@ -898,7 +854,6 @@ canvas {
     .end{
         margin: 10px;
         padding: 10px;
-        margin-bottom: 20px;
         align-items: center;
         justify-content: center;
     }
