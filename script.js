@@ -48,7 +48,9 @@ window.addEventListener('scroll', function() {
   });
 });
 
-// read more
+// read more 
+
+/* commented coz I have removed the section for a while
 
 const serviceItems = document.querySelectorAll('.read');
 const read_da = document.querySelector('#data-analysis');
@@ -88,6 +90,8 @@ read_dl.addEventListener('click', function(e) {
   }
 });
 
+*/
+
 // remove the background image, for the project boxes
 
 
@@ -120,8 +124,3 @@ document.addEventListener('keydown', function(event) {
     event.preventDefault();
   }
 });
-
-
-
-
-
